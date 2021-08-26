@@ -20,11 +20,10 @@
 9. [Model Evaluation](#model_eval)
 
 
-<hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
+<hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
 <h1 name="project_summary">Project Summary</h1>
-
-<hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
+<hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
 <a name='project_objectives'></a>
 ### Project Objectives 
