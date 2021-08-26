@@ -1,7 +1,7 @@
 <center><h1>Telco Churn Project</h1></center>
 
-
-# [Table of Contents](#toc)
+<a name='toc'></a>
+# [Table of Contents]
 1. [Project Summary](#project_summary)
     1. [Project Objectives](#project_objectives)
     2. [Business Goals](#business_goals)
