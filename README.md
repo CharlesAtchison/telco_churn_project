@@ -19,10 +19,10 @@
 8. [Modeling](#modeling)
 9. [Model Evaluation](#model_eval)
 10. 
-<hr style="border-top: 10px groove tan; border-bottom: 10px groove tan; margin-top: 5px; margin-bottom: 5px"></hr>
+<hr style="border-top: 10px groove tan; margin-top: 5px; margin-bottom: 5px"></hr>
 
 ### Project Summary
-<hr style="border-top: 10px groove tan; border-bottom: 10px groove tan; margin-top: 5px; margin-bottom: 5px"></hr>
+<hr style="border-top: 10px groove tan; margin-top: 5px; margin-bottom: 5px"></hr>
 
 <a name='project_objectives'></a>
 ### Project Objectives 
