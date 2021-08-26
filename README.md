@@ -1,7 +1,7 @@
 <center><h1>Telco Churn Project</h1></center>
 
 <a name='toc'></a>
-# [Table of Contents]
+## Table of Contents
 1. [Project Summary](#project_summary)
     1. [Project Objectives](#project_objectives)
     2. [Business Goals](#business_goals)
@@ -21,7 +21,6 @@
 <hr style="border-top: 10px groove tan; margin-top: 5px; margin-bottom: 5px"></hr>
 
 <h1 name='project_summary'>Project Summary</h1>
-<hr style="border-top: 10px groove tan; margin-top: 5px; margin-bottom: 5px"></hr>
 
 <a name='project_objectives'></a>
 ### Project Objectives 
