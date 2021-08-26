@@ -20,7 +20,7 @@
 9. [Model Evaluation](#model_eval)
 
 
-<div name="project_summary" style="border-top: 10px groove tan; border-bottom: 10px groove tan; margin-top: 5px; margin-bottom: 5px ">
+<div id="project_summary" style="border-top: 10px groove tan; border-bottom: 10px groove tan; margin-top: 5px; margin-bottom: 5px ">
     ###Project Summary
 
 <a name='project_objectives'></a>
