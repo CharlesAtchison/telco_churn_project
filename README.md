@@ -21,7 +21,7 @@
 ## Project Summary <a name="project_summary"></a>
 <hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
 
-### Project Obectives <a name='project_objectives'></a>
+### Project Objectives <a name='project_objectives'></a>
 > - Create a Jupyter Notebook Report that shows processes and analysis with the goal of finding drivers for customer churn.
 > - Within README.md file, include project description with goals, inital hypotheses, a data dictonary, project planning, instructions on how to recreate your project, answers to hypotheses, key findings, recommendations, and takeaways from the project.
 > - CSV file with customer_id, probabilty of churn, and prediction of churn (1 = churn, 0 = not_churn). These predictions will be dervied from the best performing model on the test portion of the data. 
