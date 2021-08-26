@@ -20,7 +20,7 @@
 9. [Model Evaluation](#model_eval)
 
 
-<h1 name="project_summary" style.less="border-bottom: none">Project Summary</h1><hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
+<h1 name="project_summary" { border-bottom: 1px solid black }>Project Summary</h1><hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
 <a name='project_objectives'></a>
 ### Project Objectives 
