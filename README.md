@@ -21,7 +21,7 @@
 10. 
 <hr style="border-top: 10px groove tan; margin-top: 5px; margin-bottom: 5px"></hr>
 
-### Project Summary <a name='project_summary'></a>
+<h1 name='project_summary'>Project Summary</h1>
 <hr style="border-top: 10px groove tan; margin-top: 5px; margin-bottom: 5px"></hr>
 
 <a name='project_objectives'></a>
