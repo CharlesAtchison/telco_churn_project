@@ -2,7 +2,7 @@
 
 
 <a name ='toc'></a>
-# Table of Contents 
+<h1 name='toc'>Table of Contents</h1>
 1. [Project Summary](#project_summary)
     1. [Project Objectives](#project_objectives)
     2. [Business Goals](#business_goals)
@@ -21,7 +21,9 @@
 
 
 <hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
+
 <h1 name="project_summary">Project Summary</h1>
+
 <hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
 
 <a name='project_objectives'></a>
