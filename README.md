@@ -17,12 +17,9 @@
 8. [Modeling](#modeling)
 9. [Model Evaluation](#model_eval)
 
-
 <hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
-## Project Summary <a name="project_summary"></a>
-<hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
-
 ### Project Obectives <a name='project_objectives'></a>
+<hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
 > - Create a Jupyter Notebook Report that shows processes and analysis with the goal of finding drivers for customer churn.
 > - Within README.md file, include project description with goals, inital hypotheses, a data dictonary, project planning, instructions on how to recreate your project, answers to hypotheses, key findings, recommendations, and takeaways from the project.
 > - CSV file with customer_id, probabilty of churn, and prediction of churn (1 = churn, 0 = not_churn). These predictions will be dervied from the best performing model on the test portion of the data. 
@@ -44,7 +41,40 @@
 > - Modules necessary to recreate project
 
 ### Data Dictionary <a name='data_dict'></a>
->-
+
+| Feature                | Datatype               | Definition   |
+|:-----------------------|:-----------------------|:-------------|
+| churn                  | 7049 non-null: object  |defines if the customer has churned|
+
+
+
+| Feature                | Datatype               | Definition   |
+|:-----------------------|:-----------------------|:-------------|
+| customer_id            | 7049 non-null: object  |unique int for each customer|
+| gender                 | 7049 non-null: object  |specifies the gender|
+| is_senior_citizen      | 7049 non-null: int64   |identifies if customer is senior citizen|
+| partner                | 7049 non-null: object  |if customer has a partner
+| dependents             | 7049 non-null: object  |if customer has dependents|
+| phone_service          | 7049 non-null: int64   |if customer has phone service|
+| internet_service       | 7049 non-null: int64   |if customer has internet service|
+| contract_type          | 7049 non-null: int64   |defines contract service|
+| payment_type           | 7049 non-null: object  |defines the payment type|
+| monthly_charges        | 7049 non-null: float64 |average monthly charges|
+| total_charges          | 7038 non-null: float64 |total revenue from customer|
+| tenure                 | 7049 non-null: int64   |number of months the customer has been with company|
+| is_female              | 7049 non-null: bool    |defines if the customer is female
+| has_churned            | 7049 non-null: bool    |defines if the customer has churned|
+| has_phone              | 7049 non-null: bool    |defines if the customer has phone services|
+| has_internet           | 7049 non-null: bool    |defines if the customer has internet|
+| has_phone_and_internet | 7049 non-null: bool    |defines if the customer has internet and phone|
+| partner_depenents      | 7049 non-null: int64   |defines if the customer has partner and dependents|
+| start_date             | 7049 non-null: object  |date customer joined company|
+| avg_monthly_charges    | 7049 non-null: object  |average monthly charges|
+| matches_orig           | 7049 non-null: object  |does it match avg month charges|
+| phone description      | 7049 non-null: object  |number of lines|
+| internet_desciption    | 7049 non-null: object  |internet service type|
+| contract_description   | 7049 non-null: object  |contract type and length|
 
 <div style="text-align: right"><a href=#toc>Table of Contents</a></div>
 <hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
+
