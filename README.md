@@ -20,7 +20,8 @@
 9. [Model Evaluation](#model_eval)
 
 
-<h1 name="project_summary" style="border-top: 10px groove tan; border-bottom: 10px groove tan; margin-top: 5px; margin-bottom: 5px ">Project Summary</h1>
+<div name="project_summary" style="border-top: 10px groove tan; border-bottom: 10px groove tan; margin-top: 5px; margin-bottom: 5px ">
+    ###Project Summary
 
 <a name='project_objectives'></a>
 ### Project Objectives 
@@ -81,7 +82,7 @@
 | phone description      | 7049 non-null: object  |number of lines|
 | internet_desciption    | 7049 non-null: object  |internet service type|
 | contract_description   | 7049 non-null: object  |contract type and length|
-
+</div>
 <div style="text-align: right"><a href=#toc>Table of Contents</a></div>
 <hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
 
