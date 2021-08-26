@@ -1,4 +1,4 @@
-<center><h1>Telco Churn Project</h1></center>
+# Telco Churn Project
 
 <a name='toc'></a>
 ## Table of Contents
@@ -50,38 +50,35 @@
 <a name='data_dict'></a>
 ### Data Dictionary
 
-| Feature                | Datatype               | Definition   |
-|:-----------------------|:-----------------------|:-------------|
-| churn                  | 7049 non-null: object  |defines if the customer has churned|
+| Target                | Datatype               | Definition   |
+|:----------------------|:-----------------------|:-------------|
+| churn                 | 7043 non-null: object  |describes if the customer has churned|
 
 
 
-| Feature                | Datatype               | Definition   |
-|:-----------------------|:-----------------------|:-------------|
-| customer_id            | 7049 non-null: object  |unique int for each customer|
-| gender                 | 7049 non-null: object  |specifies the gender|
-| is_senior_citizen      | 7049 non-null: int64   |identifies if customer is senior citizen|
-| partner                | 7049 non-null: object  |if customer has a partner
-| dependents             | 7049 non-null: object  |if customer has dependents|
-| phone_service          | 7049 non-null: int64   |if customer has phone service|
-| internet_service       | 7049 non-null: int64   |if customer has internet service|
-| contract_type          | 7049 non-null: int64   |defines contract service|
-| payment_type           | 7049 non-null: object  |defines the payment type|
-| monthly_charges        | 7049 non-null: float64 |average monthly charges|
-| total_charges          | 7038 non-null: float64 |total revenue from customer|
-| tenure                 | 7049 non-null: int64   |number of months the customer has been with company|
-| is_female              | 7049 non-null: bool    |defines if the customer is female
-| has_churned            | 7049 non-null: bool    |defines if the customer has churned|
-| has_phone              | 7049 non-null: bool    |defines if the customer has phone services|
-| has_internet           | 7049 non-null: bool    |defines if the customer has internet|
-| has_phone_and_internet | 7049 non-null: bool    |defines if the customer has internet and phone|
-| partner_depenents      | 7049 non-null: int64   |defines if the customer has partner and dependents|
-| start_date             | 7049 non-null: object  |date customer joined company|
-| avg_monthly_charges    | 7049 non-null: object  |average monthly charges|
-| matches_orig           | 7049 non-null: object  |does it match avg month charges|
-| phone description      | 7049 non-null: object  |number of lines|
-| internet_desciption    | 7049 non-null: object  |internet service type|
-| contract_description   | 7049 non-null: object  |contract type and length|
+
+| Feature               | Datatype               | Definition   |
+|:----------------------|:-----------------------|:-------------|
+| customer_id           | 7043 non-null: object  |unique customer identifier|
+| gender                | 7043 non-null: object  |identifies customer gender|
+| senior_citizen        | 7043 non-null: int64   |describes if customer is senior citizen|
+| partner               | 7043 non-null: object  |describes if customer has a partner|
+| dependents            | 7043 non-null: object  |describes if customer has dependents|
+| tenure                | 7043 non-null: int64   |quantifies length of serivce from customer|
+| phone_service         | 7043 non-null: object  |describes if customer has phone service|
+| multiple_lines        | 7043 non-null: object  |describes if customer has multiple phone lines|
+| online_security       | 7043 non-null: object  |describes if customer has online security|
+| online_backup         | 7043 non-null: object  |describes if customer has online backup|
+| device_protection     | 7043 non-null: object  |describes if customer has device protection|
+| tech_support          | 7043 non-null: object  |describes if customer has tech support|
+| streaming_tv          | 7043 non-null: object  |describes if customer has tv streaming|
+| streaming_movies      | 7043 non-null: object  |describes if customer has movie streaming|
+| paperless_billing     | 7043 non-null: object  |describes if customer uses paperless billing|
+| monthly_charges       | 7043 non-null: float64 |quantifies average monthly charges|
+| total_charges         | 7043 non-null: object  |quantifies all charges for customer|
+| contract_type         | 7043 non-null: object  |describes customer contract type|
+| internet_service_type | 7043 non-null: object  |describes customer internet service type|
+| payment_type          | 7043 non-null: object  |describes customer service payment type|
     
     
 <div style="text-align: right"><a href='#toc'>Table of Contents</a></div>
