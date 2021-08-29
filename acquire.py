@@ -59,3 +59,40 @@ def train_validate_test_split(df, target, seed=123):
                                        random_state=seed,
                                        stratify=train_validate[target])
     return train, validate, test
+
+
+def fetch_data_dict(telco_df):
+    ''' Fetches and formats a data_dict to put into project README.md
+    returns two pandas DataFrame formatted markdown.
+    '''
+
+    data_dict = {
+        'customer_id':'unique customer identifier',
+        'gender':'identifies customer gender',
+        'senior_citizen':'describes if customer is senior citizen',
+        'partner':'describes if customer has a partner',
+        'dependents':'describes if customer has dependents',
+        'tenure':'quantifies length of serivce from customer',
+        'phone_service'	:'describes if customer has phone service',
+        'multiple_lines':'describes if customer has multiple phone lines',
+        'online_security':'describes if customer has online security',
+        'online_backup':'describes if customer has online backup',
+        'device_protection':'describes if customer has device protection',
+        'tech_support':'describes if customer has tech support',
+        'streaming_tv':'describes if customer has tv streaming',
+        'streaming_movies':'describes if customer has movie streaming',
+        'paperless_billing':'describes if customer uses paperless billing',
+        'monthly_charges':'quantifies average monthly charges',
+        'total_charges':'quantifies all charges for customer',
+        'contract_type':'describes customer contract type',
+        'internet_service_type':'describes customer internet service type',
+        'payment_type':'describes customer service payment type',
+        'churn':'describes if the customer has churned'
+                }
+    feature_dict = pd.DataFrame([{'Feature': col, 
+         'Datatype': f'{telco_df[col].count()} non-null: {telco_df[col].dtype}',
+        'Definition' : data_dict[col]} for col in telco_df.columns]).set_index('Feature').to_markdown()
+    target_dict = pd.DataFrame([{'Target': col, 
+         'Datatype': f'{telco_df[col].count()} non-null: {telco_df[col].dtype}',
+        'Definition' : data_dict[col]} for col in telco_df.columns if col == 'churn']).set_index('Target').to_markdown()
+    return (target_dict, feature_dict)
