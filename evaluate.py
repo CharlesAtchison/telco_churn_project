@@ -1,3 +1,5 @@
+import pandas as pd
+
 def replace_obj_cols(daf: pd.DataFrame, dropna=False) -> (pd.DataFrame, dict, dict):
     '''Takes a DataFrame and will return a DataFrame that has
     all objects replaced with int values and the respective keys are return
@@ -56,12 +58,19 @@ def replace_obj_cols(daf: pd.DataFrame, dropna=False) -> (pd.DataFrame, dict, di
     4    male  reading   14
         
     '''
+    # Copy DataFrame so it doesn't alter inital DataFrame
     df = daf.copy(deep=True)
+
+    # Set replace and revert keys 
     replace_key = {}
     revert_key = {}
+
+    # Fetch all column names
     col_names = df.select_dtypes('object').columns
+    
     if dropna:
         df.dropna(inplace=True)
+
     for col in col_names:
         uniques = list(df[col].unique())
         temp_dict = {}
