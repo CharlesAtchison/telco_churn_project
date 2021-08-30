@@ -1,16 +1,32 @@
 import pandas as pd
-from acquire import get_iris_data
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
-
-def prep_data(iris_data):
-    '''Takes iris_dataframe and drop columns and then returns dummy
-    DataFrames for each species type.
+def show_dists(df):
+    '''Takes dataframe and returns formatted tables for each column type.
     '''
-    args = [col_name for col_name in iris_data.columns if col_name not in ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species_name']]
-    iris_data.drop(columns=[*args], inplace=True)
-    iris_data.rename(columns={'species_name': 'species'}, inplace=True)
-    dummy_vars = pd.get_dummies(iris_data.species)
-        
-    return iris_data, dummy_vars
-    
+    for col in df.columns:
+        if df[col].dtype != 'object':
+            plt.hist(df[col])
+            plt.title(f'Distribution of {col}')
+            plt.show()
+
+
+def train_validate_test_split(df, target, seed=123):
+    '''
+    This function takes in a dataframe, the name of the target variable
+    (for stratification purposes), and an integer for a setting a seed
+    and splits the data into train, validate and test. 
+    Test is 20% of the original dataset, validate is .30*.80= 24% of the 
+    original dataset, and train is .70*.80= 56% of the original dataset. 
+    The function returns, in this order, train, validate and test dataframes. 
+    '''
+    train_validate, test = train_test_split(df, test_size=0.2, 
+                                            random_state=seed, 
+                                            stratify=df[target])
+    train, validate = train_test_split(train_validate, test_size=0.3, 
+                                       random_state=seed,
+                                       stratify=train_validate[target])
+    return train, validate, test
+
 

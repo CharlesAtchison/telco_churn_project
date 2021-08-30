@@ -96,3 +96,42 @@ def fetch_data_dict(telco_df):
          'Datatype': f'{telco_df[col].count()} non-null: {telco_df[col].dtype}',
         'Definition' : data_dict[col]} for col in telco_df.columns if col == 'churn']).set_index('Target').to_markdown()
     return (target_dict, feature_dict)
+
+def format_data_description(df):
+    '''
+    '''
+    # Replace total_charges with zero for those who don't have any tenure yet (AKA. new customers)
+    df.total_charges.replace({' ': 0}, inplace=True)
+    df.total_charges = df.total_charges.astype('float64')
+
+    # Try to drop customer_id because each is a unique id and doesn't tell us any information about
+    # each customer.
+    try:
+        df.drop(columns=['customer_id'], inplace=True)
+    except:
+        pass
+
+    # Change column names to get more metrics within the columns and to input into ML modeling
+    replace_key = {
+    'gender': {'Female': 0, 'Male': 1},
+    'partner': {'Yes': 1, 'No': 0},
+    'dependents': {'Yes': 1, 'No': 0},
+    'phone_service': {'Yes': 1, 'No': 0},
+    'multiple_lines': {'Yes': 1, 'No phone service': 2, 'No': 0},
+    'online_security': {'Yes': 1, 'No': 0, 'No internet service': 2},
+    'online_backup': {'Yes': 1, 'No': 0, 'No internet service': 2},
+    'device_protection': {'Yes': 1, 'No': 0, 'No internet service': 2},
+    'tech_support': {'Yes': 1, 'No': 0, 'No internet service': 2},
+    'streaming_tv': {'Yes': 1, 'No': 0, 'No internet service': 2},
+    'streaming_movies': {'Yes': 1, 'No': 0, 'No internet service': 2},
+    'paperless_billing': {'Yes': 1, 'No': 0},
+    'churn': {'Yes': 1, 'No': 0},
+    'contract_type': {'Two year': 0, 'One year': 1, 'Month-to-month': 2},
+    'internet_service_type': {'DSL': 0, 'Fiber optic': 1, 'None': 2},
+    'payment_type': {'Mailed check': 0, 'Credit card (automatic)': 1,
+                     'Bank transfer (automatic)': 2, 'Electronic check': 3}
+            }
+    df.replace(to_replace=replace_key, inplace=True)
+
+    return df.describe().T.to_markdown()
+

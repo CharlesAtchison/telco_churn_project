@@ -8,6 +8,7 @@
     3. [Audience](#audience)
     4. [Deliverables](#deliverables)
     5. [Data Dictonary](#data_dict)
+    6. [Data Description](#data_desc)
 3. [Executive Summary](#exe_summ)
 2. [Data Acqisition](#data_acquisition)
 5. [Preparation](#preparation)
