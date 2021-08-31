@@ -8,7 +8,7 @@
     3. [Audience](#audience)
     4. [Deliverables](#deliverables)
     5. [Inital Hypotheses](#inital_hyp)
-2. [Executive Summary](#exe_summ)
+2. [Executive Summary](#exe_sum)
 3. [Acquire Data](#acquire)
     1. [Data Dictonary](#data_dict)
     2. [Data Description](#data_desc)
