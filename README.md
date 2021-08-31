@@ -1,23 +1,37 @@
-# Telco Churn Project
+<center><h1>Telco Churn Project</h1></center>
 
-<a name='toc'></a>
-## Table of Contents
+<a name ='toc'></a>
+# Table of Contents 
 1. [Project Summary](#project_summary)
     1. [Project Objectives](#project_objectives)
     2. [Business Goals](#business_goals)
     3. [Audience](#audience)
     4. [Deliverables](#deliverables)
-    5. [Data Dictonary](#data_dict)
-    6. [Data Description](#data_desc)
-3. [Executive Summary](#exe_summ)
-2. [Data Acqisition](#data_acquisition)
-5. [Preparation](#preparation)
-6. [Exploratory Data Analysis](#exp_data_analysis)
-2. [Drivers of Churn](#drivers_of_churn)
-3. [Machine Learning Construction](#ml_construction)
-7. [Statistical Testing](#stat_testing)
-8. [Modeling](#modeling)
-9. [Model Evaluation](#model_eval)
+    5. [Inital Hypotheses](#inital_hyp)
+2. [Executive Summary](#exe_summ)
+3. [Acquire Data](#acquire)
+    1. [Data Dictonary](#data_dict)
+    2. [Data Description](#data_desc)
+    3. [Acquire Takeaways](#acquire_takeaways)
+4. [Prepare Data](#prep_data)
+    1. [Distributions](#distributions)
+    2. [Prepare Takeaways](#prepare_takeaways)
+5. [Data Exploration](#explore)
+    1. [Correlations](#correlations)
+    2. [Pairplot](#pairplot)
+    3. [Explore Takeaways](#explore_takeaways)
+6. [Statistical Testing](#stat_testing)
+    1. [Hypothesis](#hypothesis)
+    2. [Conclusion](#conclusion)
+    3. [Takeaway](#stat_takeaway)
+7. [Modeling & Evaluation](#modeling)
+    1. [Baseline Accuracy](#baseline)
+    2. [Minimum Viable Product Model](#mvp)
+    3. [Feature Engineering](#feature_eng)
+    4. [Hyperparameter Optimization](#hyp_opt)
+    5. [Test Best Model](#test_best)
+    6. [Create Predictions via CSV](#csv)
+    7. [Conclusions & Next Steps](#conclusions)
 
 <hr style="border-top: 10px groove tan; margin-top: 5px; margin-bottom: 5px"></hr>
 
@@ -47,6 +61,26 @@
 > - A final report within Juypter Notebooks
 > - A final report presentation using Juypter Notebooks
 > - Modules necessary to recreate project
+
+
+<a name='inital_hyp'></a>
+### Inital Hypotheses
+
+
+<div style="text-align: right"><a href='#toc'>Table of Contents</a></div>
+<hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
+
+<a name='exe_sum'></a>
+## Executive Summary
+> - I found that the Logistic Regression Modeling was consistently the most accurage at predicting churn using the features: _gender, senior_citizen, dependents, tenure, phone_service,online_security, online_backup, device_protection, paperless_billing, monthly_charges, total_charges, contract_type, internet_service_type, 'payment_type_
+> - I found that most of the models weren't to different in their accuracy, even with hyperparameter optimization and feature engineering.
+> - If I had more time to work on this project, I'd continue doing more feature engineering and hyperparameter optmization.
+
+<div style="text-align: right"><a href='#toc'>Table of Contents</a></div>
+<hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
+
+<a name='acquire'></a>
+## Acquire Data
 
 <a name='data_dict'></a>
 ### Data Dictionary
@@ -81,9 +115,13 @@
 | internet_service_type | 7043 non-null: object  |describes customer internet service type|
 | payment_type          | 7043 non-null: object  |describes customer service payment type|
 
+
 <a name='data_desc'></a>
 ### Data Description
 
+<style>
+  table {margin-left: 0 !important;}
+</style>
 |                       |   count |        mean |         std |   min |    25% |     50% |     75% |     max |
 |:----------------------|--------:|------------:|------------:|------:|-------:|--------:|--------:|--------:|
 | gender                |    7043 |    0.504756 |    0.500013 |  0    |   0    |    1    |    1    |    1    |
@@ -107,6 +145,31 @@
 | internet_service_type |    7043 |    0.872923 |    0.737796 |  0    |   0    |    1    |    1    |    2    |
 | payment_type          |    7043 |    1.66193  |    1.16332  |  0    |   1    |    2    |    3    |    3    |
 
+
+<a name='acquire_takeaways'></a>
+### Acquire Takeaways
+> - Wrote a SQL query to acquire telco from Codeup Database.
+> - Using `acquire.py` we will create and cache the created CSV file if it doesn't exist, otherwise it will return the file.
+> - There are 7043 rows and 21 columns within the inital data query.
+> - The `customer_id`column doesn't offer any insight into customer churn, as each observation contains a unique id, so we will drop this column.
+
 <div style="text-align: right"><a href='#toc'>Table of Contents</a></div>
 <hr style="border-top: 10px groove tan; margin-top: 1px; margin-bottom: 1px"></hr>
 
+<a name='prep_data'></a>
+## Prepare Data
+
+<a name='distributions'></a>
+### Distributions
+|||
+|-|-|
+|![image.png](attachment:image.png)|![image-2.png](attachment:image-2.png)|
+|![image-3.png](attachment:image-3.png)|![image-4.png](attachment:image-4.png)|
+|![image-5.png](attachment:image-5.png)|![image-6.png](attachment:image-6.png)|
+|![image-7.png](attachment:image-7.png)|![image-8.png](attachment:image-8.png)|
+|![image-9.png](attachment:image-9.png)|![image-10.png](attachment:image-10.png)|
+|![image-11.png](attachment:image-11.png)|![image-12.png](attachment:image-12.png)|
+|![image-13.png](attachment:image-13.png)|![image-14.png](attachment:image-14.png)|
+|![image-15.png](attachment:image-15.png)|![image-16.png](attachment:image-16.png)|
+|![image-17.png](attachment:image-17.png)|![image-18.png](attachment:image-18.png)|
+|![image-19.png](attachment:image-19.png)|![image-20.png](attachment:image-20.png)|

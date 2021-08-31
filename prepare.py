@@ -1,4 +1,5 @@
 import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
@@ -11,6 +12,16 @@ def show_dists(df):
             plt.title(f'Distribution of {col}')
             plt.show()
 
+def show_violinplots(df, target):
+    '''Takes train and target and returns violin plots for all metrics
+    '''
+    target_df = df[target].replace({0:'No', 1:'Yes'})
+    for col in df.columns:
+        if col != target:
+            sns.violinplot(x=target_df, y=df[col])
+            plt.title(f'{col.capitalize()} v {target.capitalize()} Plot')
+            plt.xlabel(target.capitalize())
+            plt.show()
 
 def train_validate_test_split(df, target, seed=123):
     '''
@@ -31,7 +42,7 @@ def train_validate_test_split(df, target, seed=123):
 
 
 def format_data_description(df):
-    '''
+    '''formats data and returns a new_df formatted and a markdown of the description
     '''
     # Replace total_charges with zero for those who don't have any tenure yet (AKA. new customers)
     df.total_charges.replace({' ': 0}, inplace=True)
@@ -39,6 +50,7 @@ def format_data_description(df):
 
     # Try to drop customer_id because each is a unique id and doesn't tell us any information about
     # each customer.
+    customer_id_index = (df.customer_id).reset_index()
     try:
         df.drop(columns=['customer_id'], inplace=True)
     except:
@@ -66,4 +78,4 @@ def format_data_description(df):
             }
     df.replace(to_replace=replace_key, inplace=True)
 
-    return df.describe().T.to_markdown()
+    return customer_id_index, df.describe().T.to_markdown()
