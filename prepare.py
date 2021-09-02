@@ -6,7 +6,9 @@ from sklearn.model_selection import train_test_split
 def show_dists(df):
     '''Takes dataframe and returns formatted tables for each column type.
     '''
-    for col in df.columns:
+    fix, axes = plt.subplots(10, 2, sharex=True, figsize=(10, 5))
+    for n, col in enumerate(df.columns):
+        print(n)
         if df[col].dtype != 'object':
             plt.hist(df[col])
             plt.title(f'Distribution of {col}')
@@ -15,6 +17,7 @@ def show_dists(df):
 def show_violinplots(df, target):
     '''Takes train and target and returns violin plots for all metrics
     '''
+    fig, axes = plt.subplots(10, 2, sharex=True, figsize=(10, 5))
     target_df = df[target].replace({0:'No', 1:'Yes'})
     for col in df.columns:
         if col != target:

@@ -119,6 +119,9 @@
 <a name='data_desc'></a>
 ### Data Description
 
+<style>
+  table {margin-left: 0 !important;}
+</style>
 |                       |   count |        mean |         std |   min |    25% |     50% |     75% |     max |
 |:----------------------|--------:|------------:|------------:|------:|-------:|--------:|--------:|--------:|
 | gender                |    7043 |    0.504756 |    0.500013 |  0    |   0    |    1    |    1    |    1    |
@@ -158,18 +161,8 @@
 
 <a name='distributions'></a>
 ### Distributions
-|||
-|-|-|
-|![image](https://user-images.githubusercontent.com/52976346/131536741-2be66a31-4950-44b0-b4c9-c6d08806fbe4.png)|![senior_citizen v churn](images/ss_churn.png) "Senior Citizen v Churn"|
-|![image-3.png](attachment:image-3.png)|![image-4.png](attachment:image-4.png)|
-|![image-5.png](attachment:image-5.png)|![image-6.png](attachment:image-6.png)|
-|![image-7.png](attachment:image-7.png)|![image-8.png](attachment:image-8.png)|
-|![image-9.png](attachment:image-9.png)|![image-10.png](attachment:image-10.png)|
-|![image-11.png](attachment:image-11.png)|![image-12.png](attachment:image-12.png)|
-|![image-13.png](attachment:image-13.png)|![image-14.png](attachment:image-14.png)|
-|![image-15.png](attachment:image-15.png)|![image-16.png](attachment:image-16.png)|
-|![image-17.png](attachment:image-17.png)|![image-18.png](attachment:image-18.png)|
-|![image-19.png](attachment:image-19.png)|![image-20.png](attachment:image-20.png)|
+
+![violinplots](violinplots.png)
 
 <a name='prepare_takeaways'></a>
 ### Prepare Takeaways
