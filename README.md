@@ -160,7 +160,7 @@
 ### Distributions
 |||
 |-|-|
-|![image](https://user-images.githubusercontent.com/52976346/131536741-2be66a31-4950-44b0-b4c9-c6d08806fbe4.png)|![image]ss_churn.png|
+|![image](https://user-images.githubusercontent.com/52976346/131536741-2be66a31-4950-44b0-b4c9-c6d08806fbe4.png)|![senior_citizen v churn](images/ss_churn.png) "Senior Citizen v Churn"|
 |![image-3.png](attachment:image-3.png)|![image-4.png](attachment:image-4.png)|
 |![image-5.png](attachment:image-5.png)|![image-6.png](attachment:image-6.png)|
 |![image-7.png](attachment:image-7.png)|![image-8.png](attachment:image-8.png)|
