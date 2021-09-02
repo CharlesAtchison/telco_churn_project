@@ -162,7 +162,7 @@
 <a name='distributions'></a>
 ### Distributions
 
-![violinplots](violinplots.png)
+![violinplots](images/violinplots.png)
 
 <a name='prepare_takeaways'></a>
 ### Prepare Takeaways
@@ -206,7 +206,7 @@ replacement_key = {
 <a name='correlations'></a>
 ### Correlations
 
-![image.png](attachment:image.png)
+![heatmap](images/heatmap.png)
 
 #### Correlations with Churn
 |Column Name|       churn |
@@ -234,7 +234,7 @@ replacement_key = {
 
 <a name='pairplot'></a>
 ### Pair Plot
-![image.png](attachment:image.png)
+![pairplot](images/pairplot.png)
 
 <a name='explore_takeaways'></a>
 ### Explore Takeaways
@@ -291,7 +291,7 @@ most_accurate_comb = ('gender', 'senior_citizen', 'dependents', 'tenure', 'phone
 <a name='hyp_opt'></a>
 ### Hyperparameter Optimization
 
-![image-3.png](attachment:image-3.png)
+![hyperparameter_optimization](images/hyperparameter_opt.png)
 
 #### Train
 

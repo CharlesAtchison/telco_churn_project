@@ -17,14 +17,17 @@ def show_dists(df):
 def show_violinplots(df, target):
     '''Takes train and target and returns violin plots for all metrics
     '''
-    fig, axes = plt.subplots(10, 2, sharex=True, figsize=(10, 5))
+    col_names = [col for col in df.columns if col != target]
+    fig, axes = plt.subplots(10, 2, figsize=(16, 60))
+    
     target_df = df[target].replace({0:'No', 1:'Yes'})
-    for col in df.columns:
-        if col != target:
-            sns.violinplot(x=target_df, y=df[col])
-            plt.title(f'{col.capitalize()} v {target.capitalize()} Plot')
-            plt.xlabel(target.capitalize())
-            plt.show()
+    for n, col in enumerate(col_names):
+        fig_row = n // 2
+        fig_col = n % 2
+        sns.violinplot(ax=axes[fig_row, fig_col], x=target_df, y=df[col])
+        axes[fig_row, fig_col].set_title(f'{col.capitalize()} v {target.capitalize()} Plot')
+
+
 
 def train_validate_test_split(df, target, seed=123):
     '''
